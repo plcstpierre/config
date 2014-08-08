@@ -3,26 +3,30 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+color molokai
+
+set smartcase " As soon as a upper case is typed, don't ignore the case anymore
+
+" Menu modes
+set wildmode=list:longest,full
+set wildmenu
+
+set ignorecase " Ignore case when searching
+set smartcase " As soon as a upper case is typed, don't ignore the case anymore
+set cursorline
 set incsearch
-set hlsearch
+set hls
+set nocompatible
+nnoremap ; :
 
-" no compatibility
-set nocp
+set statusline=%<%f\ %h%m%r%h%w\%y[%{&ff}]\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ %l/%L\ %P
+set laststatus=2
 
-color jellybeans
-
-set guifont=Monospace\ 14
-
-
-set columns=120
-set lines=40
-
-" wild menu
-set wmnu
-set wildignorecase
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-e> <End>
+inoremap <C-a> <Home>
 
 " no error bell
 set noeb
 
-set wrap
-set textwidth=80
