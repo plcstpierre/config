@@ -7,3 +7,6 @@
 [submodule "vim/dotvim/bundle/vim-l9"]
 	path = vim/dotvim/bundle/vim-l9
 	url = https://github.com/vim-scripts/L9.git
+[submodule "vim/dotvim/bundle/molokai"]
+	path = vim/dotvim/bundle/molokai
+	url = https://github.com/tomasr/molokai.git
