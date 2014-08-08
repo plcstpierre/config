@@ -1,0 +1,9 @@
+[submodule "vim/dotvim/bundle/jellybeans"]
+	path = vim/dotvim/bundle/jellybeans
+	url = https://github.com/nanotech/jellybeans.vim.git
+[submodule "vim/dotvim/bundle/nerdtree"]
+	path = vim/dotvim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/dotvim/bundle/vim-l9"]
+	path = vim/dotvim/bundle/vim-l9
+	url = https://github.com/vim-scripts/L9.git

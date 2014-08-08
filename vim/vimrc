@@ -1,0 +1,28 @@
+execute pathogen#infect()
+
+syntax on
+filetype plugin indent on
+
+set incsearch
+set hlsearch
+
+" no compatibility
+set nocp
+
+color jellybeans
+
+set guifont=Monospace\ 14
+
+
+set columns=120
+set lines=40
+
+" wild menu
+set wmnu
+set wildignorecase
+
+" no error bell
+set noeb
+
+set wrap
+set textwidth=80
