@@ -30,3 +30,4 @@ inoremap <C-a> <Home>
 " no error bell
 set noeb
 
+set guifont=Menlo\ Regular:h14"
