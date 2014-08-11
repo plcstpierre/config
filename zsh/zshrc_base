@@ -1,0 +1,50 @@
+#!/bin/zsh
+
+# History
+export HISTSIZE=2000
+export HISTFILE="$HOME/.zhistory"
+export SAVEHIST=$HISTSIZE
+
+# case-insensitive tab completion 
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# Color
+autoload -U compinit
+compinit
+autoload colors; colors
+
+setopt PROMPT_SUBST
+
+export CLICOLOR=TRUE
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+# Overload prompt to NOT display dirty flag (performance concern)
+function git_prompt_info() {
+	ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+	#echo "%{$fg[red]%}${ref#refs/heads/}"
+	echo "(${ref#refs/heads/})"
+}
+
+# Prompt
+export PS1="%{$fg[green]$terminfo[bold]%}%n@%m %{$fg[cyan]%}%~ %# %{$reset_color%}"
+# export RPROMPT=$(echo '%{\033[32m%}%*%{\033[00m%}')
+RPROMPT='$(git_prompt_info)'
+
+# Alias
+alias ls="ls -al"
+alias l="ls -al"
+alias c="cd"
+alias watch="watch -n 1"
+alias diff="diff --unified"
+
+#Keybinding
+bindkey '^R' history-incremental-search-backward
+
+#Auto correct
+setopt correct_all
+
+jgrep() { /usr/bin/grep --color=always -r --include=\*.java "$*" . | less -R }
+xgrep() { /usr/bin/grep --color=always -r --include=\*.xml "$*" . | less -R }
+pgrep() { /usr/bin/grep --color=always -r --include=\*.properties "$*" . | less -R }
+
+alias less="less --quit-if-one-screen -R"
