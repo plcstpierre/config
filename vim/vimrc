@@ -30,4 +30,11 @@ inoremap <C-a> <Home>
 " no error bell
 set noeb
 
-set guifont=Menlo\ Regular:h14"
+
+if has("gui_running")
+	if has("gui_macvim")
+		set guifont=Menlo\ Regular:h14"
+	else
+		set guifont=Meslo\ LG\ S\ 14
+	endif
+endif
