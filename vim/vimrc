@@ -38,3 +38,9 @@ if has("gui_running")
 		set guifont=Meslo\ LG\ S\ 14
 	endif
 endif
+
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
