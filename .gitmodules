@@ -10,3 +10,6 @@
 [submodule "vim/dotvim/bundle/molokai"]
 	path = vim/dotvim/bundle/molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "vim/dotvim/bundle/fuf-fizzy"]
+	path = vim/dotvim/bundle/fuf-fizzy
+	url = https://github.com/cristibalan/fuf-fizzy.git
