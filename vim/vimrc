@@ -35,7 +35,7 @@ if has("gui_running")
 	if has("gui_macvim")
 		set guifont=Menlo\ Regular:h14"
 	else
-		set guifont=Meslo\ LG\ S\ 14
+		set guifont=Meslo\ LG\ S\ 12
 	endif
 endif
 
@@ -44,3 +44,7 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
